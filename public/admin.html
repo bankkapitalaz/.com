@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="loginSection" class="login-container">
+        <h1 class="login-title">Giriş</h1>
+        <input type="text" id="usernameInput" class="login-input" placeholder="İstifadəçi adı">
+        <input type="password" id="passwordInput" class="login-input" placeholder="Şifrə">
+        <button class="login-btn" onclick="login()">Daxil ol</button>
+        <div id="errorMessage" class="error-message"></div>
+    </div>
+
+    <div id="adminPanel" class="admin-container" style="display: none;">
+        <div class="admin-header">
+            <h1 class="admin-title">Admin Panel</h1>
+            <p class="admin-subtitle">Real vaxtda mesajlar</p>
+        </div>
+        <div id="messagesContainer" class="messages-container">
+            <div class="no-messages">Hələ ki mesaj yoxdur</div>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>
